@@ -60,8 +60,8 @@ export default function Navbar() {
           >
             {documents?.button1}
           </Button>
-          <Button className={classes.button} href="#">
-            Gallery
+          <Button className={classes.button} href={documents?.btn3Url}>
+            {documents?.button3}
           </Button>
         </Toolbar>
       </AppBar>
