@@ -54,12 +54,6 @@ export default function Navbar() {
           <Typography variant="h6" className={classes.title}>
             <img src={logoImage} className={classes.image} alt="logoImage" />
           </Typography>
-          <Button
-            className={classes.button}
-            href="https://discord.com/invite/zekCue738G"
-          >
-            {documents?.button1}
-          </Button>
           <Button className={classes.button} href={documents?.btn3Url}>
             {documents?.button3}
           </Button>

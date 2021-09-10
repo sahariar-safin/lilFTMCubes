@@ -4,12 +4,27 @@ import { formatEther } from "@ethersproject/units";
 import Identicon from "./Identicon";
 import { useEffect, useState } from "react";
 import { getDocuments } from "../api/document";
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 
 type Props = {
   handleOpenModal: any;
 };
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      flexGrow: 1,
+    },
+    button: {
+      fontSize: "25px",
+      letterSpacing: "0.1px",
+      cursor: "pointer",
+    },
+  })
+);
+
 export default function ConnectButton({ handleOpenModal }: Props) {
+  const classes = useStyles();
   const { activateBrowserWallet, account } = useEthers();
   const etherBalance = useEtherBalance(account);
 
@@ -89,6 +104,22 @@ export default function ConnectButton({ handleOpenModal }: Props) {
         marginTop: "50px",
       }}
     >
+      <Text
+        className={classes.button}
+        color="white"
+        href="https://twitter.com/LilFTMCubes"
+        me="10px"
+      >
+        <i className="fab fa-twitter"></i>
+      </Text>
+      <Text
+        className={classes.button}
+        color="white"
+        href="https://discord.com/invite/zekCue738G"
+        me="10px"
+      >
+        <i className="fab fa-discord"></i>
+      </Text>
       <Button
         onClick={handleConnectWallet}
         bg="blue.800"
