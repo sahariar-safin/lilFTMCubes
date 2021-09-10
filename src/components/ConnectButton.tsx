@@ -104,22 +104,6 @@ export default function ConnectButton({ handleOpenModal }: Props) {
         marginTop: "50px",
       }}
     >
-      <Text
-        className={classes.button}
-        color="white"
-        href="https://twitter.com/LilFTMCubes"
-        me="10px"
-      >
-        <i className="fab fa-twitter"></i>
-      </Text>
-      <Text
-        className={classes.button}
-        color="white"
-        href="https://discord.com/invite/zekCue738G"
-        me="10px"
-      >
-        <i className="fab fa-discord"></i>
-      </Text>
       <Button
         onClick={handleConnectWallet}
         bg="blue.800"
