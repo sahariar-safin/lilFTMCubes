@@ -3,7 +3,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import { Text } from "@chakra-ui/react";
+import { Text, Link } from "@chakra-ui/react";
 import logoImage from "../images/logo.png";
 import { useEffect, useState } from "react";
 import { getDocuments } from "../api/document";
@@ -60,21 +60,15 @@ export default function Navbar() {
           <Typography variant="h6" className={classes.title}>
             <img src={logoImage} className={classes.image} alt="logoImage" />
           </Typography>
-          <Text
-            className={classes.icon}
-            color="white"
-            href="https://twitter.com/LilFTMCubes"
-            me="10px"
-          >
-            <i className="fab fa-twitter"></i>
+          <Text className={classes.icon} color="white" me="10px">
+            <Link href="https://twitter.com/LilFTMCubes">
+              <i className="fab fa-twitter"></i>
+            </Link>
           </Text>
-          <Text
-            className={classes.icon}
-            color="white"
-            href="https://discord.com/invite/zekCue738G"
-            me="10px"
-          >
-            <i className="fab fa-discord"></i>
+          <Text className={classes.icon} color="white" me="10px">
+            <Link href="http://discord.gg/zekCue738G">
+              <i className="fab fa-discord"></i>
+            </Link>
           </Text>
           <Button className={classes.button} href={documents?.btn3Url}>
             {documents?.button3}
