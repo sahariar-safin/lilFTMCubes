@@ -3,6 +3,7 @@ import { Grid } from "@material-ui/core";
 import MintButtons from "./Mint";
 import { getDocuments } from "../api/document";
 import { useEffect, useState } from "react";
+import img from "../images/ftmcubegif.gif";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -22,6 +23,10 @@ const useStyles = makeStyles((theme: Theme) =>
       paddingTop: "30px",
       maxWidth: "550px",
       textAlign: "left",
+    },
+    img: {
+      width: "200px",
+      margin: "0 auto",
     },
   })
 );
@@ -50,6 +55,11 @@ export default function Home() {
   return (
     <Grid className={classes.root}>
       <h1 className={classes.header}>{heading?.title}</h1>
+      <img
+        src={img}
+        className={`${classes.img} img-fluid text-center`}
+        alt=""
+      />
       <p className={classes.detail}>{heading?.des}</p>
       <MintButtons />
       <p className={classes.detail}>{buttons.button4}</p>
